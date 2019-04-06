@@ -3,10 +3,10 @@ import "./TeamCard.css";
 
 const TeamCard = props => (
   <div className="card">
-    <div className="card-body">
+    <div className="img-container">
       <img 
         alt={"Team #" + props.id}
-        src={props.image}
+        src={props.logo}
         onClick={() => props.confirmClick(props.id)}
       />
     </div>  
