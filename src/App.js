@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Jumbotron from "./components/Jumbotron";
 import TeamCard from "./components/TeamCard";
+import Wrapper from "./components/Wrapper";
 import logo from "./teams.json"
+
 
 class App extends Component {
   
@@ -54,9 +56,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Jumbotron score={this.state.score} bestScore={this.state.bestScore} />
-          <div className="container">
+      <>
+        <Jumbotron score={this.state.score} target={this.state.target} />
+          <Wrapper>
             {this.shuffleLogo().map(team => (
               <TeamCard
                 confirmClick={this.confirmClick}
@@ -64,8 +66,8 @@ class App extends Component {
                 logo={team.logo}          
               />
             ))}
-          </div>
-      </div>
+          </Wrapper>
+      </>
     );
   }
 }
