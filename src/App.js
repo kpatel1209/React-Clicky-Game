@@ -16,6 +16,17 @@ class App extends Component {
     // status: ""
   };
 
+  shuffleLogo = () => {
+    const array = [];
+      while(array.length !== logo.length){
+        let teamLogo = logo[Math.floor(Math.random()*logo.length)];
+        if(array.indexOf(teamLogo) < 0){
+          array.push(teamLogo)
+        }
+      }
+      return array
+  }
+
   confirmClick = logo => {
     if(this.state.clickedLogo.indexOf(logo) > -1) {
       this.setState({ clickedLogo: [] })
@@ -40,24 +51,15 @@ class App extends Component {
     clickedLogo.push(logo)
 
     this.setState({ clickedLogo })
-    console.log(this.state.clickedLogo)
-  }
-
-  shuffleLogo = () => {
-    const array = [];
-      while(array.length !== logo.length){
-        let teamLogo = logo[Math.floor(Math.random()*logo.length)];
-        if(array.indexOf(teamLogo) < 0){
-          array.push(teamLogo)
-        }
-      }
-      return array
+    // console.log(this.state.clickedLogo)
   }
 
   render() {
     return (
       <>
-        <Jumbotron score={this.state.score} target={this.state.target} />
+        <Jumbotron
+          score={this.state.score}
+          target={this.state.target} />
           <Wrapper>
             {this.shuffleLogo().map(team => (
               <TeamCard
