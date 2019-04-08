@@ -9,6 +9,7 @@ const TeamCard = props => (
           src={props.logo}
           onClick={() => props.confirmClick(props.id)}
         />
+        <h6>{props.name}</h6>
       </div>  
     </div>
 )
