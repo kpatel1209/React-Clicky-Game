@@ -2,6 +2,7 @@
   position: relative;
   margin: 5px;
   width: 165px;
+  height: auto;
 }
 
 .logo-container {
@@ -9,4 +10,12 @@
   margin-top: auto;
   margin-bottom: auto;
   overflow: hidden;
+}
+
+h6 {
+  font-family: 'ABeeZee', sans-serif;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
