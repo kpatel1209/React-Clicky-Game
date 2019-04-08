@@ -3,7 +3,7 @@ import "./TeamCard.css";
 
 const TeamCard = props => (
   <div className="card">
-    <div className="img-container">
+    <div className="logo-container">
       <img 
         alt={"Team #" + props.id}
         src={props.logo}

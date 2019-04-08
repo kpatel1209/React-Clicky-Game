@@ -10,8 +10,8 @@ class App extends Component {
     // teams,
     clickedLogo: [],
     score: 0,
-    target: 5,
-    status: ""
+    target: 0,
+    // status: ""
   };
 
   confirmClick = logo => {
@@ -21,7 +21,7 @@ class App extends Component {
       if(this.state.score > this.state.target) {
         this.setState({ target: this.state.score })
       }
-      this.setState({ score:0 })
+      this.setState({ score: 0 })
       return;
     
     } else {
@@ -42,27 +42,29 @@ class App extends Component {
   }
 
   shuffleLogo = () => {
-    const newArr = [];
-      while(newArr.length !== logo.length){
+    const array = [];
+      while(array.length !== logo.length){
         let teamLogo = logo[Math.floor(Math.random()*logo.length)];
-        if(newArr.indexOf(teamLogo) < 0){
-          newArr.push(teamLogo)
+        if(array.indexOf(teamLogo) < 0){
+          array.push(teamLogo)
         }
       }
-      return newArr
+      return array
   }
 
   render() {
     return (
-      <div className="container">
+      <div>
         <Jumbotron score={this.state.score} bestScore={this.state.bestScore} />
-          {this.shuffleLogo().map(team => (
-            <TeamCard
-              confirmClick={this.confirmClick}
-              id={team.id}
-              logo={team.logo}          
-            />
-          ))}
+          <div className="container">
+            {this.shuffleLogo().map(team => (
+              <TeamCard
+                confirmClick={this.confirmClick}
+                id={team.id}
+                logo={team.logo}          
+              />
+            ))}
+          </div>
       </div>
     );
   }

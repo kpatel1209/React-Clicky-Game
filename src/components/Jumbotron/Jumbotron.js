@@ -5,8 +5,8 @@ const Jumbotron = props => (
   <div className="jumbotron jumbotron-fluid">
   <div className="container">
     <h1 className="display-4">NFL Team Memory Game</h1>
-    <p className="click-card">Click any team, but only click it once!</p>
-    <h3 className="score">Score: {props.score} | Top Score: {props.target}</h3>
+    <h5 className="click-card">Click any team logo, but only click it once!</h5>
+    <h3 className="score">Current Score: {props.score} | Score to Beat: {props.target}</h3>
   </div>
 </div>
 )
