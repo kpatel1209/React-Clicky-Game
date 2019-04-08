@@ -62,8 +62,8 @@ class App extends Component {
             {this.shuffleLogo().map(team => (
               <TeamCard
                 confirmClick={this.confirmClick}
-                id={team.id}
-                logo={team.logo}          
+                name={team.name}
+                logo={team.logo}    
               />
             ))}
           </Wrapper>
