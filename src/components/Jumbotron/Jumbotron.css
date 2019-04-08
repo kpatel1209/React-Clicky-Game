@@ -1,3 +1,10 @@
+.jumbotron {
+  background-color: black;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
 .display-4 {
   font-family: 'Patua One', cursive;
 }
