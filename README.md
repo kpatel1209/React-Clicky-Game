@@ -19,7 +19,7 @@ This is a memory game using React. The application's UI is split into three comp
 
 5. Once the user's score is reset after an incorrect guess, the game will restart.
 
-## Technologies used
+## Technologies Used
 
 * React
 * ES6
