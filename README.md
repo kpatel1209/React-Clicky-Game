@@ -1,4 +1,4 @@
-# Clicky-Game
+# HW #15 - React Clicky Game
 
 ## Overview
 
