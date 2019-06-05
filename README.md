@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a NFL themed memory game using React. The application's UI is split into three components.
+This is an NFL themed memory game using React. The application's UI is split into three components.
 
 ## Instructions
 
